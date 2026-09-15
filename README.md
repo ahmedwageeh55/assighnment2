@@ -1,39 +1,77 @@
 Assignment 2
 
-Node.js Route Assignment
+Node.js Core Modules & CRUD APIs
 
-This project is an implementation of Assignment 2 using Node.js and Express.js.
+This assignment implements Node.js core module tasks and a simple CRUD API using a JSON file for data storage.
 
-Requirements
+Part 1: Node.js Core Modules
 
-- Node.js
-- npm
-- Postman
+The assignment covers:
 
-Installation
+- Working with file and directory paths
+- Getting file names and extensions
+- Parsing and joining paths
+- Checking absolute paths
+- Resolving relative paths
+- Creating and deleting files/folders
+- Event Emitters
+- Reading and writing files
+- Checking directories
+- Getting OS platform and CPU architecture
+- Readable and Writable Streams
+- Using pipelines and file compression
 
-npm install
+Part 2: CRUD Operations Using HTTP
 
-Run the Project
+All user data is stored in a JSON file using the "fs" module.
 
-npm start
+Data is not stored or managed using arrays.
 
-Or:
+APIs
 
-node index.js
+Method| Endpoint| Description
+POST| "/user"| Add a new user
+PATCH| "/user/:id"| Update an existing user
+DELETE| "/user/:id"| Delete a user
+GET| "/user"| Get all users
+GET| "/user/:id"| Get a user by ID
+
+POST /user
+
+Adds a new user to the JSON file and checks that the email does not already exist.
+
+PATCH /user/:id
+
+Updates the user's name, age, or email by ID and saves the changes to the JSON file.
+
+DELETE /user/:id
+
+Deletes a user by ID from the JSON file.
+
+GET /user
+
+Returns all users stored in the JSON file.
+
+GET /user/:id
+
+Returns a specific user by ID.
 
 Testing
 
-The APIs can be tested using Postman.
+All APIs can be tested using Postman.
 
-Make sure the server is running before sending requests.
+The Postman requests should have meaningful names such as:
 
-Technologies Used
+- Add User
+- Update User
+- Delete User
+- Get All Users
+- Get User By ID
 
-- Node.js
-- Express.js
-- Postman
+Bonus
 
-Author
+The bonus solution is implemented in a separate file named:
 
-ahmed-wageeh
+"bonus.js"
+
+The bonus task is the Kth Missing Positive Number problem from LeetCode.
